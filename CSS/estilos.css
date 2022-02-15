@@ -1,0 +1,202 @@
+/*UNIR - Práctica de responsive design
+Juan Carlos Moreno*/
+html {
+    font-size: 62.5%; /*Reset para REMS- 62.5% = 10px de 16px */
+}
+
+
+body {
+    /* Google fonts (son gratis) fonts.google.com*/
+    font-family: 'Lato', sans-serif;
+    font-size: 1.6rem;
+    line-height: 2;
+}
+
+/**Estilos Globales**/
+img {
+    max-width: 100%;
+}
+
+.contenedor-principal{
+    width: 100%;
+    margin:0 auto;
+    max-width: 140rem;/*Ancho total máximo que puede ocupar*/
+    min-width: 360px;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+.contenedor{
+    max-width: 80%;/*El ancho maximo que puede tomar la seccion a partir del centro*/
+    min-width: 20%;
+    margin: 0 auto 0 auto;
+    box-sizing:border-box;
+}
+
+h1 {
+    font-size: 3.8rem;
+}
+
+h2 {
+    font-size: 3.4rem;
+}
+
+h3 {
+    font-size: 3rem;
+}
+
+h4 {
+    font-size: 2.6rem;
+}
+
+/** Utilidades **/
+.seccion {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.fw-300 {
+    font-weight: 300;
+}
+
+.centrar-texto {
+    text-align: center;
+}
+
+/**** BOTONES ****/
+.boton {
+    color: #ffffff;
+}
+
+.boton-amarillo {
+    background-color: #e08709;
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 1.8rem;
+    padding: 1rem 3rem;
+    margin-top: 3rem;
+    
+    display: inline-block;
+}
+
+.boton-verde {
+    background-color: #71b100;
+}
+
+/*Header*/
+.site-header.inicio{
+background-image: url(../img/header.jpg); /*insertar imagen*/
+background-position: center center;/*centrar alto y ancho*/
+background-size: cover;/*ajusta el tamaño de la imagen a la pantalla*/
+height: 100vh;/*vh es la altura relativa*/
+min-height: 60rem;/*altura minima de 600px*/
+}
+
+.contenido-header {
+    height: 100%;
+    display: flex;
+    flex-direction: column;/*Posiciona los elementos verticalmente*/
+    justify-content: space-between;/*Separa los contenidos uno arriba y uno abajo*/
+    box-sizing: border-box;
+}
+
+.contenido-header h1 {
+    color: white;
+    padding-bottom: 2rem;
+    max-width: 60rem;
+    line-height: 3rem;
+}
+
+.barra{
+    display: flex;
+    justify-content: space-between;
+    /*Margin da espacio hacia afuera del elemento
+    mientras que padding lo da hacia adentro*/
+    padding-top: 3rem;
+    align-items: center;/*alinea verticalmente el logo con los link de navegacion*/
+}
+
+/**Navegacion**/
+.navegacion a {
+    color: rgba(255, 255, 255, .3);
+    /*grba es red gren blue y alpha channel (transparencia)
+    hsl significa hiug saturation lightness
+    y hsla es alpha channel*/
+
+    text-decoration: none;/*elimina el subrayado*/
+    font-size: 1.8rem; /* es igual a 18px*/
+    margin-right: 2rem;
+}
+
+.navegacion a:hover{
+    color: rgba(44, 218, 29, 0.835);/*el texto cambia de color si pongo el cursor encima*/
+}
+
+.navegacion a:last-of-type{
+    margin: 0;
+}
+
+/** Iconos nosotros **/
+
+.iconos-nosotros {
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
+.icono{
+    flex-basis: calc(33.3% - 1rem);
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.icono h3 {
+    text-transform: uppercase;
+}
+
+/*Anuncios*/
+.contenedor-anuncios {
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
+
+.anuncio {
+    flex-basis: calc(33.3% - 1rem);
+    /*border-style: solid;
+    border-color: #B5B5B5;
+    border-width: 1px; lo de abajo es igual*/
+
+    border: 1px solid #B5B5B5;
+    background-color: #f5f5f5;
+    box-sizing: border-box;
+}
+
+.contenido-anuncio {
+    padding: 2rem;
+}
+
+.contenido-anuncio h3, 
+.contenido-anuncio p {
+    margin: 0;
+}
+
+.precio {
+    color: #71b100;
+    font-weight: 700;
+}
+
+@media screen and (max-width: 600px){
+    .icono{
+        width: 100%;
+    }
+
+    .anuncio{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 400px){
+    .contenedor-principal{
+        width: 100%;
+    }
+}
